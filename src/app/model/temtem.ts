@@ -1,3 +1,5 @@
+import {TypeColor} from "./typeColor";
+
 export class Temtem {
   private _number: number;
   private _name: string;
@@ -12,6 +14,7 @@ export class Temtem {
     this._types = types;
     this._portraitWikiUrl = portraitWikiUrl;
     this._wikiPortraitUrlLarge = wikiPortraitUrlLarge;
+
     }
 
   get wikiPortraitUrlLarge(): string {

@@ -1,6 +1,6 @@
-<div class="card" *ngIf="temtem!=null">
-  <div class="card__side card__side--front card__side--front-2">
-    <div class="card__description card-image"><img
+<div  class="card " *ngIf="temtem!=null">
+  <div [ngStyle]="{background: 'linear-gradient(45deg, '+getType()+')'}" class="card__side card__side--front card__side--front-2" >
+    <div class="card__description card-image "><img
       src="https://temtem-api.mael.tech/images/portraits/temtem/large/{{temtem.name}}.png">
     </div>
   </div>
