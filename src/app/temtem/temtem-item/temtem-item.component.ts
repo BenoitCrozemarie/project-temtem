@@ -1,14 +1,14 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Temtem} from "../model/temtem";
+import {Temtem} from "../../model/temtem";
 import {ActivatedRoute} from "@angular/router";
-import {TemtemService} from "../temtem.service";
+import {TemtemService} from "../../temtem.service";
 
 @Component({
   selector: 'app-temtem',
-  templateUrl: './temtem.component.html',
-  styleUrls: ['./temtem.component.scss']
+  templateUrl: './temtem-item.component.html',
+  styleUrls: ['./temtem-item.component.scss']
 })
-export class TemtemComponent implements OnInit {
+export class TemtemItemComponent implements OnInit {
 
   @Input() temtem:Temtem | null = null;
 

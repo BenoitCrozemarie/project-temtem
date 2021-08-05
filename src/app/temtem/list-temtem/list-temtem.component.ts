@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Temtem} from "../model/temtem";
-import {TemtemService} from "../temtem.service";
+import {Temtem} from "../../model/temtem";
+import {TemtemService} from "../../temtem.service";
 
 @Component({
   selector: 'app-list-temtem',
