@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {Temtem} from "./model/temtem";
 import {HttpClient} from "@angular/common/http";
 
@@ -7,10 +7,16 @@ import {HttpClient} from "@angular/common/http";
 })
 export class TemtemService {
 
-  url ="https://temtem-api.mael.tech/api/temtems/";
-  constructor(private http:HttpClient) { }
+  url = "https://temtem-api.mael.tech/api/temtems";
 
-  findAll(){
+  constructor(private http: HttpClient) {
+  }
+
+  findAll() {
     return this.http.get<Temtem[]>(this.url);
+  }
+
+  findByNumber(number:number) {
+    return this.http.get<Temtem>(this.url +"/"+ number);
   }
 }

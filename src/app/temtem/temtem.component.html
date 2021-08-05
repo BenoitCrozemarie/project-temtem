@@ -1,11 +1,12 @@
-
-
-<div class="card">
-  <div class="card-image">
-    <img src="https://gamepedia.cursecdn.com/temtem_gamepedia_en/thumb/b/bc/Ganki.png/200px-Ganki.png">
+<div class="card" *ngIf="temtem!=null">
+  <div class="card__side card__side--front card__side--front-2">
+    <div class="card__description card-image"><img
+      src="https://temtem-api.mael.tech/images/portraits/temtem/large/{{temtem.name}}.png">
+    </div>
   </div>
-  <div class="card-title">
-    <span class="card-id">n°104</span>
-    <span class="card-name">Ganki</span>
+  <div class="card__side card__side--back card__side--back-2">
+    <div class="card__description card__title"><span class="card-id">{{temtem.number}}</span>
+      <span class="card-name">{{temtem.name}}</span></div>
   </div>
 </div>
+

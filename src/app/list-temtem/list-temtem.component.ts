@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Temtem} from "../model/temtem";
+import {TemtemService} from "../temtem.service";
 
 @Component({
   selector: 'app-list-temtem',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListTemtemComponent implements OnInit {
 
-  constructor() { }
+  temtems: Temtem[] | null = null;
 
-  ngOnInit(): void {
+  constructor(private temtemService:TemtemService) {
+    this.findAll();
   }
 
+  ngOnInit(): void {
+
+  }
+
+  findAll(){
+    this.temtemService.findAll().subscribe(res => {
+      this.temtems = res;
+      console.log(res);
+    });
+  }
 }

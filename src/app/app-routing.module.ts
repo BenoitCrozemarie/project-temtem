@@ -4,7 +4,7 @@ import {ListTemtemComponent} from './list-temtem/list-temtem.component';
 import {TemtemComponent} from "./temtem/temtem.component";
 
 const routes: Routes = [{
-  path: "temtem-list", component: ListTemtemComponent
+  path: "temtems", component: ListTemtemComponent
 }, {
   path: "temtem/:id", component: TemtemComponent
 }];
