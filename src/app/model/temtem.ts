@@ -4,25 +4,25 @@ export class Temtem {
   private _number: number;
   private _name: string;
   private _types: string[];
-  private _portraitWikiUrl: string;
-  private _wikiPortraitUrlLarge: string;
+  private _icon: string;
+  private _lumaIcon: string;
 
 
-  constructor(number: number, name: string, types: string[], portraitWikiUrl: string, wikiPortraitUrlLarge: string) {
+  constructor(number: number, name: string, types: string[], icon: string, lumaIcon: string) {
     this._number = number;
     this._name = name;
     this._types = types;
-    this._portraitWikiUrl = portraitWikiUrl;
-    this._wikiPortraitUrlLarge = wikiPortraitUrlLarge;
+    this._icon = icon;
+    this._lumaIcon = lumaIcon;
 
     }
 
-  get wikiPortraitUrlLarge(): string {
-    return this._wikiPortraitUrlLarge;
+  get lumaIcon(): string {
+    return this._lumaIcon;
   }
 
-  set wikiPortraitUrlLarge(value: string) {
-    this._wikiPortraitUrlLarge = value;
+  set lumaIcon(value: string) {
+    this._lumaIcon = value;
   }
 
   get number(): number {
@@ -49,11 +49,11 @@ export class Temtem {
     this._types = value;
   }
 
-  get portraitWikiUrl(): string {
-    return this._portraitWikiUrl;
+  get icon(): string {
+    return this._icon;
   }
 
-  set portraitWikiUrl(value: string) {
-    this._portraitWikiUrl = value;
+  set icon(value: string) {
+    this._icon = value;
   }
 }

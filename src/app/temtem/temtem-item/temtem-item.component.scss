@@ -27,7 +27,7 @@ body {
     backface-visibility: hidden;
     transition: all .6s ease;
     box-shadow: 1em 1em 2em rgba(0,0,0,.2);
-    border: #04AA6D 2px solid;
+
 
     &--front {
       overflow: hidden;
@@ -38,7 +38,6 @@ body {
     &--back {
       color: #FFF;
       transform: rotateY(180deg);
-      background-image: linear-gradient(to right bottom, pink, blue);
     }
   }
 

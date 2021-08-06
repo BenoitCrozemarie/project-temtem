@@ -56,16 +56,16 @@ export class TemtemItemComponent implements OnInit {
 }
 
 const colors: any = {
-  Fire: "red",
-  Neutral: "white",
-  Wind: "lime",
-  Earth: "brown",
-  Water: "blue",
-  Nature: "green",
-  Electric: "yellow",
-  Mental: "pink",
-  Digital: "grey",
-  Melee: "orange",
-  Crystal: "purple",
-  Toxic: "black"
+  Fire: "#E85B4F",
+  Neutral: "#E7F7F6",
+  Wind: "#09FBB2",
+  Earth: "#B97961",
+  Water: "#44CBFF",
+  Nature: "#ADDE77",
+  Electric: "#FFE076",
+  Mental: "#C269A3",
+  Digital: "#A5C0C2",
+  Melee: "#F99462",
+  Crystal: "#EA4B68",
+  Toxic: "#5A575D"
 }
