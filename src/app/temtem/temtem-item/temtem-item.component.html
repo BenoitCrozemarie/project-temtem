@@ -1,0 +1,16 @@
+<ng-container *ngIf="temtem!=null">
+    <div class="card " routerLink="{{temtem.number}}" >
+      <div [ngStyle]="{background: 'linear-gradient(45deg, '+getType()+')'}"
+           class="card__side card__side--front card__side--front-2">
+        <div class="card__description card-image "><img
+          src="https://temtem-api.mael.tech{{temtem.icon}}">
+        </div>
+      </div>
+      <div [ngStyle]="{background: 'linear-gradient(225deg, '+getType()+')'}"
+           class="card__side card__side--back card__side--back-2">
+        <div class="card__description card-image "><img
+          src="https://temtem-api.mael.tech{{temtem.lumaIcon}}">
+        </div>
+      </div>
+    </div>
+</ng-container>

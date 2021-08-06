@@ -1,13 +1,10 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import {ListTemtemComponent} from './list-temtem/list-temtem.component';
-import {TemtemComponent} from "./temtem/temtem.component";
+import {ListTemtemComponent} from './temtem/list-temtem/list-temtem.component';
+import {TemtemItemComponent} from "./temtem/temtem-item/temtem-item.component";
 
-const routes: Routes = [{
-  path: "temtem-list", component: ListTemtemComponent
-}, {
-  path: "temtem/:id", component: TemtemComponent
-}];
+const routes: Routes = [
+  { path: 'temtem', loadChildren: () => import('./temtem/temtem.module').then(m => m.TemtemModule) }];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

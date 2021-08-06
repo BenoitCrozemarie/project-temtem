@@ -1,0 +1,8 @@
+
+<section class="content">
+  <div class="cards" *ngIf="temtems!=null">
+  <app-temtem *ngFor="let temtem of temtems"
+  [temtem]="temtem">
+
+  </app-temtem>
+</div>
