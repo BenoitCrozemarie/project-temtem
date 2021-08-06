@@ -1,4 +1,3 @@
-import {TypeColor} from "./typeColor";
 
 export class Temtem {
   private _number: number;
