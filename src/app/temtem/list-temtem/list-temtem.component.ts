@@ -10,19 +10,21 @@ import {TemtemService} from "../../temtem.service";
 export class ListTemtemComponent implements OnInit {
 
   temtems: Temtem[] | null = null;
+  valueSearch : string  = '';
 
   constructor(private temtemService:TemtemService) {
-    this.findAll();
   }
-
+  
   ngOnInit(): void {
+    this.findAll();
 
   }
 
   findAll(){
     this.temtemService.findAll().subscribe(res => {
       this.temtems = res;
-      console.log(res);
+      //console.log(res);
     });
   }
+
 }

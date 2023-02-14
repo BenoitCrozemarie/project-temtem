@@ -12,10 +12,10 @@ export class TemtemDetailComponent implements OnInit {
   
   temtem :  Temtem | null = null;
   constructor(private temtemService:TemtemService, private route: ActivatedRoute) { 
-    this.findByNumber(Number(this.route.snapshot.paramMap.get('id')));
   }
-
+  
   ngOnInit(): void {
+    this.findByNumber(Number(this.route.snapshot.paramMap.get('id')));
   }
 
   findByNumber(id : number) {
