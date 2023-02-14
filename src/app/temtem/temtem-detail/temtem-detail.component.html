@@ -1,5 +1,11 @@
 <!-- Section description -->
-<section class="sec_main">
+<section class="sec_main" *ngIf="temtem">
+    <button routerLink="../{{temtem.number - 1}}" (click)="findByNumber(temtem.number - 1)">
+        precedent
+      </button>
+      <button  routerLink="../{{temtem.number + 1}}" (click)="findByNumber(temtem.number + 1)">
+        suivant
+      </button>
     <article class="art1">
         <!-- description -->
         <div class="__desc">

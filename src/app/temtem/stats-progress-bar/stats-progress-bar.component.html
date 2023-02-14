@@ -3,7 +3,8 @@
     <div class="stats_progress_bar">
         <div class="stats_progress_bar_child"
         [ngStyle]="{'width' : stats/120*100 + '%',
-                    'background' : 'rgb('+ (255 - (255 * (2 * stats - 130 ) / 130 )) + ',calc('+ (255 * 2 * stats / 130) +' ),0)'}"
+                    'background' : 'rgb('+ (255 - (255 * (2 * stats - 130 ) / 130 )) + ','+ (255 * 2 * stats / 130) +' ,0)',
+                    'border-color' : 'rgb('+ (255 - (255 * (2 * stats - 130 ) / 130 )) + ','+ (255 * 2 * stats / 130) +' ,0)'}"
         ></div>
     </div>
 </ng-container>
