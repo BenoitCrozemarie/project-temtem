@@ -20,9 +20,8 @@ export class TemtemDetailComponent implements OnInit {
 
   findByNumber(id : number) {
     this.temtemService.findByNumber(id)
-      .subscribe(res => {
-        this.temtem = res;
-        console.log(res);
+      .subscribe((res : Temtem) => {
+        this.temtem = res;        
       });
   }
 }

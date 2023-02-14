@@ -11,8 +11,7 @@ import {TemtemService} from "../../temtem.service";
 export class TemtemItemComponent implements OnInit {
 
   @Input() temtem: Temtem | null = null;
-  color1 = "";
-  color2: string | null = null;
+ 
 
   constructor(private temtemService: TemtemService,
               private route: ActivatedRoute) {
@@ -20,14 +19,15 @@ export class TemtemItemComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log(this.temtem);
+    
   }
 
   getType() {
-    let res = "";
+    let res : string = "";
 
     if (this.temtem?.types != null) {
       if (this.temtem.types.length == 1) {
+        
         res = colors[this.temtem.types[0]]+", "+colors[this.temtem.types[0]];
       } else {
         for (let type of this.temtem?.types) {
@@ -35,23 +35,9 @@ export class TemtemItemComponent implements OnInit {
         }
         res = res.slice(0, res.length - 1)
       }
-    }
-    //console.log(res);
+    }    
     // res="red,blue"
-
     return res;
-  }
-
-  setBackgroundColor() {
-
-  }
-
-  findByNumber() {
-    this.temtemService.findByNumber(Number(this.route.snapshot.paramMap.get('id')))
-      .subscribe(res => {
-        this.temtem = res;
-        console.log(res);
-      });
   }
 }
 

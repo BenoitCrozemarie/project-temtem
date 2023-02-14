@@ -10,7 +10,7 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
-.card {
+.carda {
   margin:10px 5px;
   display: inline-block;
   width: 200px;
@@ -36,7 +36,7 @@ body {
     }
 
     &--back {
-      color: #FFF;
+      // color: #FFF;
       transform: rotateY(180deg);
     }
   }
