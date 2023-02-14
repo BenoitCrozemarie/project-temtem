@@ -1,1 +1,37 @@
-<p>temtem-detail works!</p>
+<!-- Section description -->
+<section class="sec_main" *ngIf="temtem">
+    <button routerLink="../{{temtem.number - 1}}" (click)="findByNumber(temtem.number - 1)">
+        precedent
+      </button>
+      <button  routerLink="../{{temtem.number + 1}}" (click)="findByNumber(temtem.number + 1)">
+        suivant
+      </button>
+    <article class="art1">
+        <!-- description -->
+        <div class="__desc">
+            <p>Name : {{temtem!.name}}</p>
+            <p>Type :  {{temtem!.types}}</p>
+        </div>
+        <!-- image -->
+        <div class="__icon">
+            <app-temtem [temtem]="temtem">
+                
+            </app-temtem>
+        </div>
+    </article> 
+    
+    <!-- Section Stats -->
+    <article>
+        <div>
+            <table>
+                <tr><th>hp</th><td>{{temtem!.stats.hp}}</td><td><app-stats-progress-bar [stats]=temtem!.stats.hp></app-stats-progress-bar></td></tr>
+                <tr><th>sta</th><td>{{temtem!.stats.sta}}</td><td><app-stats-progress-bar [stats]=temtem!.stats.sta></app-stats-progress-bar></td></tr>
+                <tr><th>spd</th><td>{{temtem!.stats.spd}}</td><td><app-stats-progress-bar [stats]=temtem!.stats.spd></app-stats-progress-bar></td></tr>
+                <tr><th>atk</th><td>{{temtem!.stats.atk}}</td><td><app-stats-progress-bar [stats]=temtem!.stats.atk></app-stats-progress-bar></td></tr>
+                <tr><th>def</th><td>{{temtem!.stats.def}}</td><td><app-stats-progress-bar [stats]=temtem!.stats.def></app-stats-progress-bar></td></tr>
+                <tr><th>spatk</th><td>{{temtem!.stats.spatk}}</td><app-stats-progress-bar [stats]=temtem!.stats.spatk></app-stats-progress-bar><td></td></tr>
+                <tr><th>spdef</th><td>{{temtem!.stats.spdef}}</td><app-stats-progress-bar [stats]=temtem!.stats.spdef></app-stats-progress-bar><td></td></tr>
+            </table>
+        </div>
+    </article>
+</section>

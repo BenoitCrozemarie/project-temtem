@@ -36,7 +36,7 @@ export class TemtemItemComponent implements OnInit {
         res = res.slice(0, res.length - 1)
       }
     }
-    console.log(res);
+    //console.log(res);
     // res="red,blue"
 
     return res;

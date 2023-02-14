@@ -1,0 +1,25 @@
+
+
+@keyframes grewbar{
+    from {
+      background-color: red;
+      width:0em;
+    }
+    
+  }
+  .stats_progress_bar{
+    // border: black 1px solid;
+    // background-color: grey;
+    height: 1em;
+    width: 20em;
+  }
+  
+  
+  .stats_progress_bar_child{
+    background-color: green ;
+    height:100%;
+    
+    animation: 3s grewbar;
+    transition: 2s;
+  }
+  

@@ -1,3 +1,4 @@
+import { Stats } from "./stats";
 
 export class Temtem {
   private _number: number;
@@ -5,15 +6,15 @@ export class Temtem {
   private _types: string[];
   private _icon: string;
   private _lumaIcon: string;
+  private _stats: Stats;
 
-
-  constructor(number: number, name: string, types: string[], icon: string, lumaIcon: string) {
+  constructor(number: number, name: string, types: string[], icon: string, lumaIcon: string, stats: Stats) {
     this._number = number;
     this._name = name;
     this._types = types;
     this._icon = icon;
     this._lumaIcon = lumaIcon;
-
+    this._stats = stats;
     }
 
   get lumaIcon(): string {
@@ -54,5 +55,12 @@ export class Temtem {
 
   set icon(value: string) {
     this._icon = value;
+  }
+
+  get stats(): Stats {
+    return this._stats;
+  }
+  set stats(value: Stats) {
+    this._stats = value;
   }
 }
