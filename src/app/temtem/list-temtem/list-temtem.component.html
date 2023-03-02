@@ -5,7 +5,11 @@
     <ng-container *ngFor="let temtem of temtems"> 
       
       <!-- <app-temtem [temtem]="temtem"> -->
-      <app-temtem [temtem]="temtem" *ngIf="temtem.name.toLowerCase().includes(searchValue) || temtem.number.toString() === searchValue">
+      <app-temtem [temtem]="temtem" 
+        *ngIf=" temtem.name.toLowerCase().includes(searchValue) || 
+                temtem.number.toString() === searchValue ||
+                compareType(temtem)
+        ">
       
       </app-temtem>
     </ng-container>

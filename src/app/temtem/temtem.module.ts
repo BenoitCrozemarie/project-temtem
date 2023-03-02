@@ -8,6 +8,7 @@ import { TemtemDetailComponent } from './temtem-detail/temtem-detail.component';
 import { StatsProgressBarComponent } from './stats-progress-bar/stats-progress-bar.component';
 import { FormsModule } from '@angular/forms';
 import { SearchBarComponent } from './search-bar/search-bar.component';
+import { TypeComponent } from './type/type.component';
 
 
 
@@ -17,7 +18,8 @@ import { SearchBarComponent } from './search-bar/search-bar.component';
     TemtemItemComponent,
     TemtemDetailComponent,
     StatsProgressBarComponent,
-    SearchBarComponent
+    SearchBarComponent,
+    TypeComponent
   ],
   imports: [
     CommonModule,

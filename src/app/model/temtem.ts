@@ -1,4 +1,5 @@
 import { Stats } from "./stats";
+import { Type } from "./type";
 
 export class Temtem {
   private _number: number;
@@ -63,4 +64,6 @@ export class Temtem {
   set stats(value: Stats) {
     this._stats = value;
   }
+
+ 
 }

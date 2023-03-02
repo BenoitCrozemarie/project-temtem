@@ -1,1 +1,6 @@
 <input type="text" value="" [(ngModel)]="valueSearch" (keyup)="onKeyUp()">
+<ng-container *ngFor="let type of types">
+
+    <app-type (nameEmitted)="searchType($event)" [type]="type" *ngIf="type"> </app-type>
+
+</ng-container>
