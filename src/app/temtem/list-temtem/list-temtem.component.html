@@ -1,13 +1,9 @@
-<app-search-bar></app-search-bar>
+<app-search-bar (eventSearchValue)="updateDatas($event)"></app-search-bar>
 
 <section class="content">
-  <div class="cards" *ngIf="temtems!=null">
-    <ng-container *ngFor="let temtem of temtems"> 
-      
-      <!-- <app-temtem [temtem]="temtem"> -->
-      <app-temtem [temtem]="temtem" *ngIf="temtem.name.toLowerCase().includes(searchValue) || temtem.number.toString() === searchValue">
-      
-      </app-temtem>
+  <div class="cards" *ngIf="displayTemtems.length > 0">
+    <ng-container *ngFor="let temtem of displayTemtems">
+      <app-temtem [temtem]="temtem"></app-temtem>
     </ng-container>
   </div>
 </section>

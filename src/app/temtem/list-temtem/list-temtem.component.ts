@@ -10,25 +10,34 @@ import {TemtemService} from "../../temtem.service";
 })
 export class ListTemtemComponent implements OnInit {
 
-  temtems: Temtem[] | null = null;
-  searchValue : string = ""; 
-  
+  temtems: Temtem[] = [];
+  displayTemtems: Temtem[] = [];
 
-  constructor(private temtemService:TemtemService,
-              private searchBarService : SearchBarService) {
+  constructor(
+    private temtemService:TemtemService
+  ) {
   }
-  
+
   ngOnInit() : void {
     this.findAll();
-    this.searchBarService.selectedSearchedWord$.subscribe((value)=>{
-      this.searchValue = value;
-    })
   }
 
   findAll() : void {
     this.temtemService.findAll().subscribe(res => {
       this.temtems = res;
+      this.displayTemtems = this.temtems;
     });
   }
 
+  updateDatas(search: string): void {
+    console.log(search);
+    this.displayTemtems = this.temtems.filter((temtem) =>
+      temtem.name.toLowerCase().includes(search)
+      ||
+      temtem.types.includes(search)
+      ||
+      search == ''
+    );
+    console.log(this.displayTemtems);
+  }
 }
